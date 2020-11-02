@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quatro operações matemáticas </title>
+
+    <link rel="icon" href="https://nead.ifb.edu.br/pluginfile.php/106619/course/overviewfiles/2755430.png">
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: #333;
+        }
+
+        h1{
+            color: #FFF;
+            text-shadow: 5px 5px 5px black;
+        }
+
+        input{
+            width: 30%;
+            padding: 0.5%;
+            font-size: 20px;
+            margin: 2% 0.5%;
+            border: 2px solid #FFF;
+            background-color: #333;
+            outline: none;
+            color: #FFF;
+        }
+
+        button{
+            width: 15%;
+            padding: 0.5%;
+            border: 2px solid black;
+            font-size: 15px;
+            font-weight: 700;
+            box-shadow: 5px 5px 5px black;
+
+        }
+
+        button:hover{
+            background-color: rgb(144, 144, 144);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1> Operações Matemáticas </h1>
+    <div>
+        <input type="text" id="primeiro">
+        <input type="text" id="segundo">
+
+        <input type="text" id="total" value="0" disabled>
+    </div>
+        
+    <div>
+        <button id="adi"> Adição </button>
+        <button id="sub"> Subtração </button>
+        <button id="mult"> Multiplicação </button>
+        <button id="div"> Divisão </button>
+    </div>
+    
+    <script>
+       
+       document.querySelector('#adi').addEventListener('click', adicao)
+       document.querySelector('#sub').addEventListener('click', sub)
+       document.querySelector('#mult').addEventListener('click', mult)
+       document.querySelector('#div').addEventListener('click', div)
+
+       function adicao(){
+
+            let v1 = Number(document.querySelector('#primeiro').value)
+            let v2 = Number(document.querySelector('#segundo').value)
+
+            Number(document.querySelector('#total').value= v1 + v2)
+
+       }
+
+       function sub(){
+
+            let v1 = Number(document.querySelector('#primeiro').value)
+            let v2 = Number(document.querySelector('#segundo').value)
+
+            Number(document.querySelector('#total').value= v1 - v2)
+
+        }
+
+        function mult(){
+
+            let v1 = Number(document.querySelector('#primeiro').value)
+            let v2 = Number(document.querySelector('#segundo').value)
+
+            Number(document.querySelector('#total').value= v1 * v2)
+
+        }
+
+        function div(){
+
+            let v1 = Number(document.querySelector('#primeiro').value)
+            let v2 = Number(document.querySelector('#segundo').value)
+
+            Number(document.querySelector('#total').value= v1 / v2)
+
+        }
+    </script>
+
+</body>
+</html>
