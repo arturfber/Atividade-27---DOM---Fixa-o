@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lista de compras </title>
+
+    <link rel="icon" href="https://png.pngtree.com/png-vector/20190918/ourmid/pngtree-shoping-list-icon-isolated-on-abstract-background-png-image_1740810.jpg">
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1> Lista de Compras (também funciona com Enter hein) </h1>
+
+
+    <input type="text" id="input" placeholder="Macarrão, molho, queijo...">
+    <button id="btn"> Adicionar </button>
+
+    <ul id="lista">
+        <li> Peixe </li>
+    </ul>
+    
+    <script>
+        
+        document.querySelector('#btn').addEventListener('click', adicionar)
+
+        document.querySelector('#input').addEventListener("keyup", function(e){
+            if(e.keyCode === 13){
+                adicionar()
+            }
+        });
+
+
+        function adicionar(){
+
+            let lista = document.querySelector('#lista')
+            let input = document.querySelector('#input')
+
+            lista.innerHTML = lista.innerHTML + '<li>' + input.value + '</li>'
+            
+            input.value = ''
+            input.focus()
+        }
+    </script>
+</body>
+</html>
