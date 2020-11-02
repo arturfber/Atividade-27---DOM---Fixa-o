@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Duplicar o valor digitado </title>
+
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/1180/1180606.png">
+
+    <style>
+       body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1{
+            font-weight: 700;
+            
+            text-transform: uppercase;
+        }
+
+        input{
+            width: 80%;
+            padding: 0.5%;
+            font-size: 20px;
+        }
+
+        button{
+            width: 20%;
+            margin: 2%;
+            padding: 0.5%;
+        }
+    </style>
+</head>
+<body>
+    <h1> Digite um valor </h1>
+
+    <input type="text" name="cap" id="cap">
+
+    <button class="btn"> Duplicar </button>
+
+    <script>
+
+        let num = document.querySelector('#cap')
+        let botao = document.querySelector('.btn')
+
+        num.addEventListener('click', apagar)
+        botao.addEventListener('click', duplicar)
+
+        function apagar(){
+            num.value = ''
+        }
+
+        function duplicar(){
+
+            let x = Number(num.value) * 2;
+
+            document.querySelector('#cap').value = x;
+
+        }
+
+    </script>
+</body>
+</html>
